@@ -50,7 +50,9 @@ def team_names
 end
 
 def player_numbers(team)
-  game_hash.map { |side, categories| categories[:team_name] == team ? categories[:players].values.map {|k, v| k[:number] } : nil }.compact.flatten
+  numbers = nil
+  teams.each {|name| numbers = name[:players] if name[:team_name] == team}
+  numbers.map { |name, stats| stats[:number] }
 end
 
 def player_stats(player)
