@@ -30,7 +30,7 @@ def players
 end
 
 def teams
-  hash.values
+  game_hash.values
 end
 
 def num_points_scored(player)
