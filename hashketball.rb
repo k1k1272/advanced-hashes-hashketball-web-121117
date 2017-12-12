@@ -72,6 +72,5 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
-  most_steals = players.max_by {|name, stats| stats[:steals]}.first
-  most_steals == player_with_longest_name
+  players.max_by {|name, stats| stats[:steals]}.first == player_with_longest_name
 end
