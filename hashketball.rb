@@ -15,7 +15,11 @@ def game_hash
       team_name: "Charlotte Hornets",
       colors: ["Turquoise", "Purple"],
       players: {
+<<<<<<< HEAD
         "Jeff Adrien" => {number: 4, shoe: 18, points: 10, rebounds: 1, assists: 1, steals: 2, blocks: 7, slam_dunks: 2},
+=======
+        "Jeff Adrien" => {number: 4, shoe: 18, points: 10, rebounds: 1, assists: 2, steals: 2, blocks: 7, slam_dunks: 2},
+>>>>>>> 9a584f8f7754d0c50131e779e3197be3a04b8d14
         "Bismak Biyombo" => {number: 0, shoe: 16, points: 12, rebounds: 4, assists: 7, steals: 7, blocks: 15, slam_dunks: 10},
         "DeSagna Diop" => {number: 2, shoe: 14, points: 24, rebounds: 12, assists: 12, steals: 4, blocks: 5, slam_dunks: 5},
         "Ben Gordon" => {number: 8, shoe: 15, points: 33, rebounds: 3, assists: 2, steals: 1, blocks: 1, slam_dunks: 0},
@@ -25,6 +29,7 @@ def game_hash
   }
 end
 
+<<<<<<< HEAD
 def players
   players = game_hash[:home][:players].merge(game_hash[:away][:players])
 end
@@ -59,6 +64,10 @@ end
 
 def big_shoe_rebounds
   players.sort_by { |name, stats| stats[:shoe] }[0][1][:rebounds]
+=======
+def num_points_scored(player)
+  game_hash.each { |team, categories| categories.each { |type, players| players.each { |name, stats| return stats[:points] if name == player} } }
+>>>>>>> 9a584f8f7754d0c50131e779e3197be3a04b8d14
 end
 
 def most_points_scored
