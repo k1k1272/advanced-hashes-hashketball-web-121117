@@ -29,6 +29,10 @@ def players
   game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
+def teams 
+  hash.values
+end
+
 def num_points_scored(player)
   players[player][:points]
 end
@@ -38,7 +42,7 @@ def shoe_size(player)
 end
 
 def team_colors(team)
-  game_hash.map {|side, categories| return categories[:colors] if categories[:team_name] == team}
+  teams.each {|name| return name[:colors] if name[:team_name] == team}
 end
 
 def team_names
