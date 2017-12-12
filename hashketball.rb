@@ -68,7 +68,7 @@ def winning_team
 end
 
 def player_with_longest_name
-  players.sort_by {|name, stats| name.length}.last.first
+  players.max_by {|name, stats| name.length}.last.first
 end
 
 def long_name_steals_a_ton?
