@@ -29,10 +29,6 @@ def players
   game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
-def teams
-  game_hash.values
-end
-
 def num_points_scored(player)
   players[player][:points]
 end
