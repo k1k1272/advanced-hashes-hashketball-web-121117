@@ -29,7 +29,6 @@ def game_hash
   }
 end
 
-<<<<<<< HEAD
 def players
   players = game_hash[:home][:players].merge(game_hash[:away][:players])
 end
@@ -68,7 +67,6 @@ end
 
 def num_points_scored(player)
   game_hash.each { |team, categories| categories.each { |type, players| players.each { |name, stats| return stats[:points] if name == player} } }
-
 end
 
 def most_points_scored
