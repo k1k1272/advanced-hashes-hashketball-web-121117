@@ -30,7 +30,7 @@ def players
 end
 
 def num_points_scored(player)
-  players[player][:points]
+  p = players[player][:points]
 end
 
 def shoe_size(player)
