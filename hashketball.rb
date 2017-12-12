@@ -64,10 +64,11 @@ end
 
 def big_shoe_rebounds
   players.sort_by { |name, stats| stats[:shoe] }[0][1][:rebounds]
-=======
+end
+
 def num_points_scored(player)
   game_hash.each { |team, categories| categories.each { |type, players| players.each { |name, stats| return stats[:points] if name == player} } }
->>>>>>> 9a584f8f7754d0c50131e779e3197be3a04b8d14
+
 end
 
 def most_points_scored
